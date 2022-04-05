@@ -1,21 +1,21 @@
-## Projeto: Calculadora Básica
+## Project: Simple Calculator
 
-Uma calculadora básica que faz as operações de soma, subtração, multiplicação e divisão. Um pequeno projeto para praticar conhecimentos adquiridos usando o Tkinter em 
-códigos Python. Algumas partes do código foram comentadas para referências e estudos futuros.
+Simple calculator that does the operations of sum, subtraction, multiplication and division. A small project to practice knowledge acquired using Tkinter in
+Python codes. Some parts of the code have been commented out for reference and future studies.
 
 ---
 
-## Executando o Código
+## Code Execution
 
-Para clonar este subdiretório, use o comando abaixo no git: 
+To clone this subdirectory, use the command below in git:
   
     git clone \
     --depth 1  \
     --filter=blob:none  \
     --sparse \
-    https://github.com/matheusritton/python.projetos \
+    https://github.com/matheusritton/python.projects \
     ;
-    cd python.projetos
+    cd python.projects
     git sparse-checkout set tkinter.calculator
 
-Abra o projeto na IDE de sua escolha e execute.
+Open the project in the IDE of your choice and run.

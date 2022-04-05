@@ -9,22 +9,22 @@ root.iconbitmap(r'./resources/icon.ico')
 root.title("Calculadora Básica")
 root.configure(background="#211F22")
 
-#Widget Text
+#Text Widget
 
 t = Text(root, height=0, width=15, fg="white", padx=10, bg="#211F22", font=(("Lato"), 36))
-t.tag_configure("align", justify=RIGHT) #Tag para alinhamento do texto
+t.tag_configure("align", justify=RIGHT) #Text align tag
 t.grid(row=0, column=0, columnspan=4, padx=10, pady=15)
 
-#Funções
+#Functions
 
-def click(number): #Insere os numeros
+def click(number): #Number insertion
     t.insert(INSERT,number)
-    t.tag_add("align", '1.0', END) #Adiciona a tag de alinhamento a sequência de numeros
+    t.tag_add("align", '1.0', END) #Add alignment tag in entered numbers
 
-def clear(): #Limpa a tela
+def clear(): #Clear function
     t.delete('1.0', END)
 
-def plus(): #Realiza soma
+def plus(): #Sum function
     first_number = t.get('1.0', END)
     global f_num
     global math
@@ -32,7 +32,7 @@ def plus(): #Realiza soma
     f_num = int(first_number)
     t.delete('1.0', END)
 
-def minus(): #Realiza subtração
+def minus(): #Subtraction function
     first_number = t.get('1.0', END)
     global f_num
     global math
@@ -40,7 +40,7 @@ def minus(): #Realiza subtração
     f_num = int(first_number)
     t.delete('1.0', END)
 
-def mult(): #Realiza multiplicação
+def mult(): #Multiplication function
     first_number = t.get('1.0', END)
     global f_num
     global math
@@ -48,7 +48,7 @@ def mult(): #Realiza multiplicação
     f_num = int(first_number)
     t.delete('1.0', END)
 
-def div(): #Realiza divisão
+def div(): #Division function
     first_number = t.get('1.0', END)
     global f_num
     global math
@@ -56,7 +56,7 @@ def div(): #Realiza divisão
     f_num = int(first_number)
     t.delete('1.0', END)
 
-def equal(): #Exibe o resultado
+def equal(): #Show the results in screen
     second_number = t.get('1.0', END)
     t.delete('1.0', END)
 
@@ -71,13 +71,13 @@ def equal(): #Exibe o resultado
 
     t.tag_add("align", '1.0', END)
 
-#Widget Button
+#Button Widget
 
-button_padx = 50 #Espaçamento horizontal
-button_pady = 15 #Espaçamento vertical
+button_padx = 50 #Horizontal padding
+button_pady = 15 #Vertical padding
 button_font = "Lato 12 bold"
 
-#OBS: Normalmente não é possível passar valores pra função usando command, então usamos o lambda para utilizar funções da forma como conhecemos
+#PS: Normally it's not possible to pass values to the function using command, so we use lambda to use functions as we know them.
 b0 = Button(root, text="0", padx=button_padx, pady=button_pady, fg="white", bg="#383B3F", activebackground="#211F22", font=((button_font)), command=lambda : click("0"))
 b1 = Button(root, text="1", padx=button_padx, pady=button_pady, fg="white", bg="#383B3F", activebackground="#211F22", font=((button_font)), command=lambda : click(1))
 b2 = Button(root, text="2", padx=button_padx, pady=button_pady, fg="white", bg="#383B3F", activebackground="#211F22", font=((button_font)), command=lambda : click(2))
@@ -96,7 +96,7 @@ bdiv = Button(root, text="/", padx=button_padx, pady=button_pady, fg="white", bg
 bclear = Button(root, text="C", padx=button_padx, pady=button_pady, fg="white", bg="#383B3F", activebackground="#211F22", font=((button_font)), command=clear)
 bequal = Button(root, text="=", padx=button_padx, pady=button_pady, fg="white", bg="#505A61", activebackground="#211F22", font=((button_font)), command=equal)
 
-#Posicionamento dos Buttons
+#Buttons Positioning
 
 bclear.grid(row=4, column=0, padx=5, pady=5)
 b0.grid(row=4, column=1, padx=5, pady=5)
