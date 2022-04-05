@@ -6,7 +6,7 @@ from tkinter.font import BOLD
 
 root=Tk()
 root.iconbitmap(r'./resources/icon.ico')
-root.title("Calculadora Básica")
+root.title("Simple Calculator")
 root.configure(background="#211F22")
 
 #Text Widget
