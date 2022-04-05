@@ -18,6 +18,4 @@ Para clonar este subdiretório, use o comando abaixo no git:
     cd python.projetos
     git sparse-checkout set tkinter.calculator
 
-Abra o código simple-calculator.py e edite a linha 8 referente ao path do ícone (deve ser colocado um path absoluto)
-
 Abra o projeto na IDE de sua escolha e execute.

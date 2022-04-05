@@ -5,7 +5,7 @@ from tkinter import *
 from tkinter.font import BOLD
 
 root=Tk()
-root.iconbitmap(r'C:\Users\mathe\Google Drive\Programming\Python\python.projetos\tkinter.calculator\resources\icon.ico') #Alterar path
+root.iconbitmap(r'./resources/icon.ico')
 root.title("Calculadora Básica")
 root.configure(background="#211F22")
 
