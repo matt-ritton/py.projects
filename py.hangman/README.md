@@ -3,7 +3,7 @@ Simple Hangman game. A small project to practice knowledge acquired in Python. S
 
 --- 
 
-## Code Execution
+### Code Execution
 To clone this subdirectory, use the command below in git:
 
     git clone \
