@@ -1,4 +1,3 @@
-from tkinter import *
 from crud import *
 import sqlite3
 
@@ -47,13 +46,13 @@ zip_label = Label(root, text="Zip Code")
 zip_label.grid(row=5, column=0, pady=(0, 5))
 
 show_section = Label(root, text="-------------------------- Show Records ---------------------------")
-show_section.grid(row=7, column=0, columnspan=2, pady=(10, 5))
+show_section.grid(row=8, column=0, columnspan=2, pady=(10, 5))
 
-del_section = Label(root, text="-------------------------- Delete Records --------------------------")
-del_section.grid(row=10, column=0, columnspan=2, pady=(10, 5))
+del_section = Label(root, text="--------------------- Delete or Update Records ---------------------")
+del_section.grid(row=11, column=0, columnspan=2, pady=(10, 5))
 
-del_label = Label(root, text="Select ID")
-del_label.grid(row=11, column=0, pady=(10, 5))
+select_label = Label(root, text="Select ID")
+select_label.grid(row=12, column=0, pady=(10, 5))
 
 # --------------------------------------------------------------------------#
 # Input Fields (Entry Widget)-----------------------------------------------#
@@ -82,8 +81,8 @@ state.grid(row=4, column=1, padx=20, pady=(0, 5))
 zip = Entry(root, width=30)
 zip.grid(row=5, column=1, padx=20, pady=(0, 5))
 
-del_field = Entry(root, width=30)
-del_field.grid(row=11, column=1, padx=20, pady=(10, 5))
+select_field = Entry(root, width=30)
+select_field.grid(row=12, column=1, padx=20, pady=(10, 5))
 
 # --------------------------------------------------------------------------#
 # Button Widgets------------------------------------------------------------#
@@ -94,11 +93,15 @@ submit_btn.grid(row=6, column=0, columnspan=2, pady=10, padx=10, ipadx=100)
 
 # Query Button
 query_btn = Button(root, text='Show All Records', command=lambda: query(root))
-query_btn.grid(row=8, column=0, columnspan=2, pady=10, padx=10, ipadx=120)
+query_btn.grid(row=9, column=0, columnspan=2, pady=10, padx=10, ipadx=120)
 
 # Delete Button
-del_btn = Button(root, text='Delete Record', command=lambda: delete(del_field))
-del_btn.grid(row=12, column=0, columnspan=2, pady=10, padx=10, ipadx=127)
+del_btn = Button(root, text='Delete Record', command=lambda: delete(select_field))
+del_btn.grid(row=13, column=0, columnspan=2, pady=10, padx=10, ipadx=127)
+
+#Update Button
+edit_btn = Button(root, text='Update Record', command=lambda: update(select_field))
+edit_btn.grid(row=14, column=0, columnspan=2, pady=10, padx=10, ipadx=127)
 
 # --------------------------------------------------------------------------#
 
