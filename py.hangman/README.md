@@ -14,6 +14,5 @@ To clone this subdirectory, use the command below in git:
     ;
     cd python.projects
     git sparse-checkout set py.hangman
-    Open the project in the IDE of your choice and run.
 
 Open the project in the IDE of your choice and run.
