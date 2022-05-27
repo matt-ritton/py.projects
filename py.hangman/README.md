@@ -10,7 +10,7 @@ To clone this subdirectory, use the command below in git:
     --depth 1  \
     --filter=blob:none  \
     --sparse \
-    https://github.com/matheusritton/python.projects \
+    https://github.com/matt-ritton/python.projects \
     ;
     cd python.projects
     git sparse-checkout set py.hangman
